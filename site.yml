@@ -1,0 +1,21 @@
+site:
+  title: GeoDB documentation
+  # the 404 page and sitemap files only get generated when the url property is set
+  url: https://geodb.io/docs
+  # start_page: ROOT::overview.adoc
+content:
+  # branches: release/*
+  sources:
+  - url: .
+    branches: HEAD
+    start_path: /
+ui:
+  bundle:
+    # url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    # url: https://gitlab.com/nha/antora-ui-default/-/jobs/109888284/artifacts/raw/build/ui-bundle.zip
+    url: ./ui-bundle.zip
+    snapshot: true
+  # default_layout: article
+# see https://gitlab.com/antora/antora/issues/147
+# https://docs.antora.org/antora-ui-default/templates/
+# https://github.com/aerogear/antora-ui/blob/234dc9e3caa6f6f90ba2a118d1aa97a3119a604d/src/partials/header-content.hbs

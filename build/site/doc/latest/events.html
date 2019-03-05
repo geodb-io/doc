@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events :: GeoDB documentation</title>
+    <link rel="canonical" href="https://geodb.io/docs/doc/latest/events.html">
+    <meta name="generator" content="Antora 2.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<meta name="description" content="GeoDB SaaS documentation"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://geodb.io/doc"/>
+<meta property="og:title" content="GeoDB documentation"/>
+
+
+<script defer type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fbdbbaa1-bc69-4ea2-a2ed-001775af0900";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
+<script defer type="text/javascript">!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("P16YWqiCePH6mse14R3BpuGLcwUfm8Oz");
+    analytics.page();
+  }}();</script>
+
+<script>
+  (function(h,o,t,j,a,r){
+    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    h._hjSettings={hjid:1012669,hjsv:6};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+  </head>
+  <body class="article">
+
+<noscript><style> .jsonly { display: none } </style></noscript>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<style>
+  /* sc-component-id: sc-global-866510117 */
+  html, body{
+    width:100%;
+    height:100%;
+    font-family:InterUI,-apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Oxygen,Ubuntu,Cantarell,Open Sans,sans-serif;
+    font-weight:700;
+    line-height:1.2857em;
+    text-transform:none;
+  }
+  #root {
+    width:100%;
+    height:100%;
+    min-height:100%;
+    display:grid;
+    grid-template-rows:auto 1fr auto;
+    grid-template-columns:100%;
+  }
+  /* sc-component-id: App__Footer-isKScd */
+  .gWQZoq{
+    padding:1rem;
+    background:#1C131E;
+  }
+  .gWQZoq .love{
+    text-align:right;
+    color:rgba(255,255,255,.9);
+  }
+  /* sc-component-id: App__Nav-iZkyQR */
+  .jfCmLR {
+    background-color:#1C131E;
+    color:white;
+    padding:1rem;
+    -webkit-flex:1;
+    -ms-flex:1;
+    flex:1;
+  }
+  .jfCmLR a {
+    -webkit-text-decoration:none;
+    text-decoration:none;
+    color:rgba(255,255,255,.7);
+    font-weight:bold;
+    padding:10px;
+  }
+  .jfCmLR .logo{
+    padding-right:10px;
+  }
+  .jfCmLR a:hover,.jfCmLR .active{
+    color:#fff;
+  }
+  .jfCmLR .active{
+    border-bottom:2px solid white;
+  }
+  .jfCmLR .mainLink{
+    margin-right:22px;
+  }
+</style>
+
+<style>
+
+</style>
+
+
+<header id="headercopy" class="header">
+  <nav class="App__Nav-iZkyQR jfCmLR">
+    <a href="/" class="mainLink">
+      <img style="height:10px;" height="10" src="data:image/png;base64,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" alt="Happy turtle, all the way"/>GeoDB</a>
+
+      <a href="/doc/latest/overview.html" class="active">documentation</a>
+
+      <!-- <div class="edit-this-page"><a href="file:///antora/modules/ROOT/pages/events.adoc">Edit this Page</a></div> -->
+      <!-- css - see inspiration https://codepen.io/callmenick/pen/OxpKNZ -->
+      <div class="algoliaSearchWrapper jsonly">
+        <input id="algoliaDocsearch"
+        type="text"
+        placeholder="Search docs"
+        class="ds-input"
+        autocomplete="off"
+        spellcheck="false"
+        role="combobox"
+        aria-autocomplete="list"
+        aria-expanded="false"
+        aria-owns="algolia-autocomplete-listbox-0"
+        dir="auto">
+      </div>
+
+  </nav>
+
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="doc" data-version="latest">
+  <aside class="navigation">
+    <div class="panels">
+<div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="overview.html">Overview</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="how_geodb_can_help.html">👉How GeoDB can help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="how_geodb_works.html">⚙️ How GeoDB works</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="comparison.html">👑 Comparison with other messaging systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">🐢 Get GeoDB</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="js_sdk.html">🚀JS SDK</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clj_sdk.html">💎Clojure SDK</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="rest_api.html">🎩REST API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">🎊Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="channel.html">#️⃣Channels</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="geo_filtering.html">🌍Geo filtering</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="events.html">🗺Events map</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">🛰Advanced</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="json_path.html">🎯JSON Path filtering</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="get_help.html">⛑️Get in touch</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Overview</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Overview</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="overview.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+  <main class="main">
+<article class="doc">
+<h1>Events</h1>
+<div class="paragraph">
+<p><span class="image"><img src="_images/undraw_lost_bqr2.png" alt="Map Lost" width="250" height="250"></span></p>
+</div>
+<div class="paragraph">
+<p>All the events exposed by the public interface are described here.
+.Events</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">name</th>
+<th class="tableblock halign-left valign-top">description</th>
+<th class="tableblock halign-left valign-top">example data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ready</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Event thrown when the communication has been established with the server and the authentication is correct.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">connect</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A low-level event: you probably want to use the 'ready' event instead. Thrown when the connection to the server is established (websockets, polling etc.). This does not necessarily mean that the authentication was successful. The handler function takes an array of previous/next states for maximum flexibility.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">when an error is thrown, this is useful for logging, debugging</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</article>
+  </main>
+</div>
+<footer class="App__Footer-isKScd gWQZoq">
+  <div class="love"> made by turtles for turtles with 🍷 in London</div>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+    // Your apiKey and indexName will be given to you once
+    // we create your config
+    appId: '45F3R2857E', // Add your own Application ID
+    apiKey: '6b1e594d7532affa1fcdc8b93a89a20f',
+    indexName: 'geodb',
+    // Replace inputSelector with a CSS selector
+    // matching your search input
+    inputSelector: '#algoliaDocsearch',
+    // Set debug to true if you want to inspect the dropdown
+    debug: false
+  });
+</script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+= Get in touch
+
+Need support evaluating if GeoDB is a good fit for your project? Need something more?
+
+image:undraw_personal_trainer_ote3.png[JS SDK,250,250]
+
+Get in touch!
+
+- email: turtle@geodb.io 🐢
+- chat with us (click the small round blue icon in the bottom right corner)
+- community slack: https://publicslack.com/slacks/https-geodb-slack-com/invites/new

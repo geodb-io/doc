@@ -1,0 +1,4 @@
+= Getting started
+
+
+Welcome! This tutorial highlights GeoDB’s core features;
