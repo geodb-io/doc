@@ -1,3 +1,4 @@
+* xref:getting_started.adoc[🏃Getting started]
 * xref:how_geodb_can_help.adoc[👉How GeoDB can help]
 * xref:how_geodb_works.adoc[⚙️ How GeoDB works]
 * xref:comparison.adoc[👑 Comparison with other messaging systems]

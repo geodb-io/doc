@@ -14,7 +14,7 @@ jsonPath is a small query language that allows you to easily filter and transfor
 
 It's original syntax is described there: http://goessner.net/articles/JsonPath/
 
-=== Options
+== Options
 
 .Options
 |===
@@ -38,9 +38,9 @@ It's original syntax is described there: http://goessner.net/articles/JsonPath/
 |===
 
 
-=== JsonPath Syntax
+== JsonPath Syntax
 
-==== Operators
+=== Operators
 
 .Operators
 |===
